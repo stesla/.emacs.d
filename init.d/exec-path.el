@@ -4,5 +4,5 @@
   (setq exec-path (split-string path ":")))
 
 
-(let ((path (shell-command-to-string "/bin/bash --login -c 'echo -n \"$LD_LIBRARY_PATH\"'")))
-  (setenv "LD_LIBRARY_PATH" path))
+(let ((path (shell-command-to-string "/bin/bash --login -c 'echo -n \"$DYLD_LIBRARY_PATH\"'")))
+  (setenv "DYLD_LIBRARY_PATH" path))
